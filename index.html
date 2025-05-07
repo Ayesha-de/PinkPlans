@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pink Plans</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <header class="header">
+            <div class="logo">Pink Plans</div>
+            <div class="user-section">
+                <div class="date-time" id="dateTime"></div>
+                <div class="user-account" id="userAccount">User's account</div>
+            </div>
+        </header>
+        
+        <div class="motivational-section">
+            <div class="motivational-quote" id="motivationalQuote">
+                <div id="quoteText"></div>
+            </div>
+            <div class="animation-container" id="dancingAnimation"></div>
+        </div>
+        
+        <div class="discipline-rating">
+            <div class="rating-title">Your Discipline Rating: <span id="ratingPercent">70%</span></div>
+            <div class="rating-graph">
+                <div class="rating-fill" id="ratingFill"></div>
+            </div>
+        </div>
+        
+        <div class="tasks-section">
+            <div class="section-title">TASKS TO DO:</div>
+            <div class="task-input-container">
+                <input type="text" id="taskInput" placeholder="Type here to add task...">
+                <button id="addTaskBtn">+</button>
+            </div>
+            <div class="task-list" id="taskList"></div>
+        </div>
+        
+        <div class="bottom-nav">
+            <button class="nav-btn" id="diaryBtn">YOUR DAILY DIARY</button>
+            <button class="nav-btn" id="puzzleBtn">PUZZLE GAME</button>
+            <button class="nav-btn" id="emojiBtn">RATE YOUR DAY</button>
+            <button class="nav-btn" id="feedbackBtn">FEEDBACK</button>
+        </div>
+        
+        <div class="pro-promo">
+            <div>Try Pro for 30 days</div>
+        </div>
+    </div>
+
+    <!-- Modals -->
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Login with Email</h2>
+            <input type="email" id="loginEmail" placeholder="Your email">
+            <button id="loginSubmit">Login</button>
+        </div>
+    </div>
+
+    <div class="modal" id="diaryModal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Daily Diary</h2>
+            <div class="diary-date" id="diaryDate"></div>
+            <textarea id="diaryEntry" placeholder="How are you feeling today? Write your thoughts here..."></textarea>
+            <div class="diary-history">
+                <h3>Previous Entries</h3>
+                <div class="diary-entries" id="diaryEntries"></div>
+            </div>
+            <button id="saveDiary">Save Entry</button>
+        </div>
+    </div>
+
+    <div class="modal" id="puzzleModal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Puzzle Game</h2>
+            <div class="puzzle-controls">
+                <button id="newPuzzleBtn">New Puzzle</button>
+                <div class="puzzle-stats">
+                    <span>Time: <span id="puzzleTime">00:00</span></span>
+                    <span>Moves: <span id="puzzleMoves">0</span></span>
+                </div>
+            </div>
+            <div class="puzzle-container" id="puzzleContainer"></div>
+            <div class="puzzle-message" id="puzzleMessage"></div>
+        </div>
+    </div>
+
+    <div class="modal" id="emojiModal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Rate Your Day</h2>
+            <div class="emoji-date" id="emojiDate"></div>
+            <div class="emoji-container">
+                <div class="emoji-option" data-emoji="😡" data-value="1">Angry</div>
+                <div class="emoji-option" data-emoji="😔" data-value="2">Sad</div>
+                <div class="emoji-option" data-emoji="😐" data-value="3">Neutral</div>
+                <div class="emoji-option" data-emoji="😊" data-value="4">Happy</div>
+                <div class="emoji-option" data-emoji="🤩" data-value="5">Excited</div>
+            </div>
+            <div class="emoji-selected">
+                <div id="selectedEmoji"></div>
+                <div id="emojiDescription"></div>
+            </div>
+            <div class="emoji-history">
+                <h3>Your Mood History</h3>
+                <div class="emoji-history-chart" id="emojiHistoryChart"></div>
+            </div>
+        </div>
+    </div>
+
+    <audio id="backgroundMusic" loop>
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>

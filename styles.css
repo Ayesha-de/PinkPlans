@@ -1,0 +1,640 @@
+/* Color Variables */
+:root {
+    --watermelon: #FD5B78;
+    --blush: #FE828C;
+    --creep: #77DD77;
+    --taffy: #FFC1CC;
+    --fuscia: #FF00FF;
+    --light-pink: #FFB6C1;
+    --rosy-pink: #FF66B2;
+    --dark-pink: #E75480;
+    --white: #FFFFFF;
+}
+
+/* Base Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--taffy);
+    color: #333;
+    overflow-x: hidden;
+    background-image: url('https://media.giphy.com/media/REQjNzjlfR4mVE8WSR/giphy.gif');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-blend-mode: overlay;
+}
+
+.app-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+    min-height: 100vh;
+    background-color: rgba(255, 255, 255, 0.85);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Header Styles */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 2px solid var(--fuscia);
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--dark-pink);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.user-section {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.date-time {
+    font-size: 1rem;
+    color: var(--dark-pink);
+    white-space: nowrap;
+}
+
+.user-account {
+    padding: 5px 10px;
+    background-color: var(--white);
+    border-radius: 15px;
+    color: var(--dark-pink);
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 150px;
+}
+
+/* Motivational Section */
+.motivational-section {
+    display: flex;
+    margin: 20px 0;
+    gap: 15px;
+    align-items: center;
+}
+
+.motivational-quote {
+    background-color: var(--white);
+    padding: 15px;
+    border-radius: 10px;
+    flex: 1;
+    text-align: center;
+    font-style: italic;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: var(--dark-pink);
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.animation-container {
+    width: 100px;
+    height: 100px;
+    background-image: url('https://media.giphy.com/media/HJibfnd7xqk5hAMD4v/giphy.gif');
+    background-size: cover;
+    border-radius: 10px;
+}
+
+/* Discipline Rating */
+.discipline-rating {
+    background-color: var(--white);
+    padding: 15px;
+    border-radius: 10px;
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.rating-title {
+    color: var(--dark-pink);
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.rating-graph {
+    height: 30px;
+    background-color: var(--light-pink);
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+}
+
+.rating-fill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 70%;
+    background-color: var(--creep);
+    border-radius: 15px;
+    transition: width 0.5s;
+}
+
+/* Tasks Section */
+.tasks-section {
+    background-color: var(--white);
+    padding: 15px;
+    border-radius: 10px;
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.section-title {
+    color: var(--dark-pink);
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.task-input-container {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.task-input-container input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid var(--light-pink);
+    border-radius: 5px 0 0 5px;
+    outline: none;
+}
+
+.task-input-container button {
+    padding: 10px 15px;
+    background-color: var(--dark-pink);
+    color: white;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.task-input-container button:hover {
+    background-color: var(--fuscia);
+}
+
+.task-list {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.task-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid var(--light-pink);
+    transition: all 0.3s;
+}
+
+.task-item:hover {
+    background-color: rgba(255, 182, 193, 0.1);
+}
+
+.task-item:last-child {
+    border-bottom: none;
+}
+
+.task-text {
+    flex: 1;
+}
+
+.task-flag {
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 12px;
+}
+
+.task-flag.green {
+    background-color: var(--creep);
+}
+
+.task-flag.red {
+    background-color: var(--watermelon);
+}
+
+/* Bottom Navigation */
+.bottom-nav {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.nav-btn {
+    flex: 1;
+    min-width: 120px;
+    padding: 10px;
+    background-color: var(--dark-pink);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.nav-btn:hover {
+    background-color: var(--fuscia);
+    transform: translateY(-2px);
+}
+
+/* Pro Promotion */
+.pro-promo {
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: var(--fuscia);
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.pro-promo:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 400px;
+    position: relative;
+    animation: modalFadeIn 0.3s;
+}
+
+@keyframes modalFadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--dark-pink);
+}
+
+.modal-content h2 {
+    color: var(--dark-pink);
+    margin-top: 0;
+    text-align: center;
+}
+
+.modal-content input,
+.modal-content textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid var(--light-pink);
+    border-radius: 5px;
+    resize: none;
+}
+
+.modal-content button {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--dark-pink);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+.modal-content button:hover {
+    background-color: var(--fuscia);
+}
+
+/* Puzzle Game Styles */
+.puzzle-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin: 15px 0;
+}
+
+.puzzle-tile {
+    background-color: var(--light-pink);
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    transition: all 0.3s;
+}
+
+.puzzle-tile:hover {
+    background-color: var(--rosy-pink);
+    color: white;
+}
+
+.puzzle-message {
+    text-align: center;
+    margin-top: 15px;
+    font-weight: bold;
+    color: var(--dark-pink);
+    min-height: 20px;
+}
+
+/* Emoji Rating Styles */
+.emoji-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.emoji-option {
+    text-align: center;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+.emoji-option:hover {
+    background-color: var(--taffy);
+    transform: scale(1.1);
+}
+
+.emoji-option div {
+    font-size: 2rem;
+}
+
+#selectedEmoji {
+    font-size: 3rem;
+    text-align: center;
+    margin: 20px 0;
+    min-height: 50px;
+}
+
+/* Animations */
+@keyframes sparkle {
+    0% { transform: scale(0); opacity: 0; }
+    50% { opacity: 1; }
+    100% { transform: scale(1.5); opacity: 0; }
+}
+
+.sparkle {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-image: url('https://media.giphy.com/media/REQjNzjlfR4mVE8WSR/giphy.gif');
+    background-size: cover;
+    pointer-events: none;
+    animation: sparkle 1s forwards;
+    z-index: 10;
+}
+
+@keyframes quoteMove {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
+.moving-quote {
+    white-space: nowrap;
+    animation: quoteMove 15s linear infinite;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .motivational-section {
+        flex-direction: column;
+    }
+    
+    .animation-container {
+        width: 100%;
+        height: 150px;
+    }
+    
+    .bottom-nav {
+        flex-direction: column;
+    }
+    
+    .nav-btn {
+        width: 100%;
+    }
+    
+    .user-section {
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    
+    .date-time {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .puzzle-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .emoji-container {
+        flex-wrap: wrap;
+    }
+    
+    .emoji-option {
+        width: 45%;
+        margin-bottom: 10px;
+    }
+}
+
+/* Add these new styles to your existing CSS */
+
+/* Diary Modal Styles */
+.diary-date {
+    color: var(--dark-pink);
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.diary-history {
+    margin-top: 20px;
+    border-top: 1px solid var(--light-pink);
+    padding-top: 15px;
+}
+
+.diary-entries {
+    max-height: 200px;
+    overflow-y: auto;
+    margin-top: 10px;
+}
+
+.diary-entry {
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: var(--taffy);
+    border-radius: 5px;
+    position: relative;
+}
+
+.diary-entry-date {
+    font-weight: bold;
+    color: var(--dark-pink);
+    margin-bottom: 5px;
+}
+
+.diary-entry-content {
+    white-space: pre-wrap;
+}
+
+/* Puzzle Game Enhancements */
+.puzzle-controls {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.puzzle-controls button {
+    padding: 5px 10px;
+    background-color: var(--dark-pink);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.puzzle-stats {
+    display: flex;
+    gap: 15px;
+}
+
+.puzzle-stats span {
+    color: var(--dark-pink);
+    font-weight: bold;
+}
+
+/* Emoji Rating Enhancements */
+.emoji-date {
+    color: var(--dark-pink);
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.emoji-selected {
+    text-align: center;
+    margin: 20px 0;
+}
+
+#selectedEmoji {
+    font-size: 3rem;
+    min-height: 50px;
+}
+
+#emojiDescription {
+    font-weight: bold;
+    color: var(--dark-pink);
+    margin-top: 10px;
+}
+
+.emoji-history {
+    margin-top: 20px;
+    border-top: 1px solid var(--light-pink);
+    padding-top: 15px;
+}
+
+.emoji-history-chart {
+    display: flex;
+    align-items: flex-end;
+    height: 150px;
+    gap: 5px;
+    margin-top: 15px;
+}
+
+.emoji-bar {
+    flex: 1;
+    background-color: var(--rosy-pink);
+    border-radius: 5px 5px 0 0;
+    position: relative;
+    transition: height 0.5s;
+}
+
+.emoji-bar-label {
+    position: absolute;
+    bottom: -25px;
+    width: 100%;
+    text-align: center;
+    font-size: 0.8rem;
+    color: var(--dark-pink);
+}
+
+/* Task Management Enhancements */
+.task-item {
+    position: relative;
+}
+
+.task-complete-btn {
+    margin-right: 10px;
+    cursor: pointer;
+    color: var(--dark-pink);
+}
+
+.task-delete-btn {
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+    color: var(--watermelon);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.task-item:hover .task-delete-btn {
+    opacity: 1;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+    .diary-history, .emoji-history {
+        display: none;
+    }
+    
+    .puzzle-controls {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
